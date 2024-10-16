@@ -1,0 +1,31 @@
+randrw_test: (g=0): rw=randrw, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=64
+fio-3.16
+Starting 1 process
+
+randrw_test: (groupid=0, jobs=1): err= 0: pid=8805: Wed Oct 16 04:28:31 2024
+  write: IOPS=4907, BW=613MiB/s (643MB/s)(36.0GiB/60099msec); 0 zone resets
+    slat (usec): min=74, max=390, avg=104.59, stdev=16.94
+    clat (usec): min=5, max=947444, avg=12706.06, stdev=68781.55
+     lat (usec): min=123, max=947556, avg=12810.76, stdev=68781.60
+    clat percentiles (msec):
+     |  1.00th=[    6],  5.00th=[    6], 10.00th=[    6], 20.00th=[    6],
+     | 30.00th=[    6], 40.00th=[    7], 50.00th=[    7], 60.00th=[    8],
+     | 70.00th=[    8], 80.00th=[    8], 90.00th=[    8], 95.00th=[    8],
+     | 99.00th=[    9], 99.50th=[  751], 99.90th=[  911], 99.95th=[  936],
+     | 99.99th=[  944]
+   bw (  KiB/s): min=  768, max=1591040, per=100.00%, avg=718864.66, stdev=449670.51, samples=105
+   iops        : min=    6, max=12430, avg=5616.12, stdev=3513.06, samples=105
+  lat (usec)   : 10=0.01%
+  lat (msec)   : 10=99.13%, 20=0.10%, 750=0.30%, 1000=0.47%
+  cpu          : usr=2.30%, sys=86.87%, ctx=5879, majf=0, minf=12
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
+     issued rwts: total=0,294913,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=64
+
+Run status group 0 (all jobs):
+  WRITE: bw=613MiB/s (643MB/s), 613MiB/s-613MiB/s (643MB/s-643MB/s), io=36.0GiB (38.7GB), run=60099-60099msec
+
+Disk stats (read/write):
+  nvme0n1: ios=1/32541, merge=0/98, ticks=1/3611896, in_queue=3612061, util=37.08%
