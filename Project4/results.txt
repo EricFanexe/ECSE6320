@@ -1,0 +1,552 @@
+Running experiment with 1 threads
+Vanilla single item search time: 0.0158985 seconds
+Dictionary single item search time (no SIMD): 0.00223477 seconds
+Dictionary single item search time (SIMD): 0.000583437 seconds
+Vanilla prefix search time: 0.0323419 seconds
+Dictionary prefix search time (no SIMD): 0.0322951 seconds
+Dictionary prefix search time (SIMD): 0.033759 seconds
+
+Single item search indices in vanilla data: 39 
+Single item search indices in encoded data: 39 
+Prefix search unique matches and indices in vanilla data:
+wowtuamhrrgiwxuzofbqlenmkzfkqwxv at index 39
+wowobrkfjpqcrflnlbpvahalrenkgzfg at index 8607
+wowwpbdjihxgmydwgkpwtrbwljasghax at index 13144
+wowneybvjzvjkbyxdbryrbfrddkeggcs at index 19528
+wowgoorxgbcnnlsfyzxysfpzqpbnvkfi at index 33807
+wowmwcveyjordjqmjltvojsneusfzdja at index 44479
+wowyjccoiizianxfnyimfzncqxeekmzt at index 89278
+wowywkksmoftskaakqgorglqafnpkpgi at index 104655
+wowjxbmxbnejbqkbvngdtirunpndifbf at index 105694
+wowtavxtzanraxaloltekyqplrfblzcr at index 142951
+wowuqhtwphrhutxbximhfbruqluetpon at index 168041
+wowfkiqckzaxvabdvcrhvfsitqpvcaun at index 178416
+wowrwnwwsygziparkkpejqljerologto at index 185553
+wowfezgvbdxuuyrhrowefevrtqbrlxjw at index 187067
+wowydqtxyfolyfcokqvheruvegkhnqqq at index 188655
+wowlryllxbuqegfrkuanbduaohcbdrnj at index 198573
+wowpvehoslnfmcwknzhclnuuiqzslchb at index 199277
+wowqwabbhrgussdjcmonhtbpcnvhdpbf at index 232396
+wowmoczykytaiymdtlaaxlrddtnvkvqm at index 263819
+wowssxopxajlxjysdtcotdpjaefruevo at index 277832
+wowinoaowcqbuudeyhbefhzrsvtnvnlz at index 283195
+wowekqwkafcxginjufcjhtngsmipbway at index 331389
+wowkljvgbgvkmhdbrymbcazwauzmxiru at index 338237
+wowphtwkhxeqbkdazuudfztvjxrvfcdl at index 342110
+wowmprkrlnccfazswccfjhhhcfeorhsz at index 357389
+wowwhvgxhlqsbjnbqatpznaopadbnomt at index 367304
+wowmtfwflepwkdwjhhknriqgnkkzizhv at index 391877
+wowageiydattefyxuodimovhfimjozrs at index 399545
+woweubocuxczxiyycdqiswgwlnwpnsdy at index 404136
+wowgkhoavwzmqjtbuhjfthaahxymapja at index 405273
+woweveeoagmbyncjjswqhennuobbpvgu at index 410940
+wowzhuaqrzzhurldsmmxyiaawgpzmxyp at index 458221
+wowkvotjecpggfwrsoquuopnwgpojxfw at index 465389
+wowrlmcaskwxnufsuxjhlcjsgdjyadap at index 465419
+wowcoeqfwnqqgqmivtahmvimkqvohxco at index 497560
+wowthrywtnrtwmlxzmshdvtswplpvokm at index 538708
+wowtidrtaxaygyledzekbeargesieqml at index 544668
+wowfevbdgskeykmaduesofixldqfhmzm at index 566841
+wowsyxnpndomudmngridqlwpsvvlkkxf at index 654782
+wowlsflrnejgubdwsvtlpcpmicexviyw at index 682600
+wowasjcflvsnvqkvadmxsxkspxivtqvy at index 685504
+wowmsbrrlrdcabtxmpcuwltsneylryhy at index 689896
+wowojcyrcszepfcvdnwkqjknscfvfedx at index 699584
+wowynapyndyslkwxxxfonotzwjjestpr at index 728337
+wowecbwnwppmdncpuguoknimfcwpddln at index 729319
+wowjpgickcnaiuslvhwbfzrhwwlmogbg at index 753551
+wowllppcrngzykmltwujelhdcttbabbt at index 799785
+wowqgxeeuxgcpkvwnvpgnzrhjwgpadmx at index 818790
+wowqdsucxckpmmftafrlaqelzhqzeojf at index 824658
+wowdmcvrktxoqehwprlsyqysvnqchlli at index 833703
+wowfqgvdjzzjrpgxsmnxkmxfbthgeonz at index 904139
+wowdcbrozonlzjfcpomjktmtmakzhcoi at index 938465
+wowlwnxgcfudbfbbflccumodevtdukac at index 945580
+wowyfpjbejkbxdjwtcqeykzyeankglfe at index 958699
+wowmqdpcqcwwfukdizgoxmbzrfaytisn at index 966794
+wowarlxfdfyhbuspxvkbmdxffgqmgbkc at index 972767
+wowcnqbqnkoevgsdypckefntesdgkqmn at index 978129
+wowanxxbhtgfjqqkfspjswwcjcpffunm at index 988573
+wowdzeleuypfqjowiujcrjuivjbbtvjl at index 991094
+wowlndcwnhlfbtncylupcfcftuecbwai at index 993291
+wowfjvlraidrtunxcdrufekgfwghayjo at index 1014835
+
+Prefix search unique matches and indices in encoded data:
+Encoded Value: 535247 at index 39
+Encoded Value: 476583 at index 8607
+Encoded Value: 461887 at index 13144
+Encoded Value: 444175 at index 19528
+Encoded Value: 254904 at index 33807
+Encoded Value: 815129 at index 44479
+Encoded Value: 403547 at index 89278
+Encoded Value: 431672 at index 104655
+Encoded Value: 395150 at index 105694
+Encoded Value: 677596 at index 142951
+Encoded Value: 568520 at index 168041
+Encoded Value: 361617 at index 178416
+Encoded Value: 673124 at index 185553
+Encoded Value: 561781 at index 187067
+Encoded Value: 326549 at index 188655
+Encoded Value: 310166 at index 198573
+Encoded Value: 430561 at index 199277
+Encoded Value: 297269 at index 232396
+Encoded Value: 719459 at index 263819
+Encoded Value: 394284 at index 277832
+Encoded Value: 930214 at index 283195
+Encoded Value: 436908 at index 331389
+Encoded Value: 511698 at index 338237
+Encoded Value: 344560 at index 342110
+Encoded Value: 856323 at index 357389
+Encoded Value: 631656 at index 367304
+Encoded Value: 960322 at index 391877
+Encoded Value: 766184 at index 399545
+Encoded Value: 774225 at index 404136
+Encoded Value: 775562 at index 405273
+Encoded Value: 782092 at index 410940
+Encoded Value: 834243 at index 458221
+Encoded Value: 842041 at index 465389
+Encoded Value: 842075 at index 465419
+Encoded Value: 630558 at index 497560
+Encoded Value: 914203 at index 538708
+Encoded Value: 834392 at index 544668
+Encoded Value: 783819 at index 566841
+Encoded Value: 988758 at index 654782
+Encoded Value: 1000667 at index 682600
+Encoded Value: 1031125 at index 685504
+Encoded Value: 661038 at index 689896
+Encoded Value: 292289 at index 699584
+Encoded Value: 193237 at index 728337
+Encoded Value: 192510 at index 729319
+Encoded Value: 752561 at index 753551
+Encoded Value: 142615 at index 799785
+Encoded Value: 130127 at index 818790
+Encoded Value: 126337 at index 824658
+Encoded Value: 145081 at index 833703
+Encoded Value: 77089 at index 904139
+Encoded Value: 57475 at index 938465
+Encoded Value: 53521 at index 945580
+Encoded Value: 769692 at index 958699
+Encoded Value: 41871 at index 966794
+Encoded Value: 38589 at index 972767
+Encoded Value: 153796 at index 978129
+Encoded Value: 30298 at index 988573
+Encoded Value: 28970 at index 991094
+Encoded Value: 616764 at index 993291
+Encoded Value: 16836 at index 1014835
+Saved dictionary and encoded data for 1 threads.
+
+
+Running experiment with 2 threads
+Vanilla single item search time: 0.0168299 seconds
+Dictionary single item search time (no SIMD): 0.00225779 seconds
+Dictionary single item search time (SIMD): 0.000597504 seconds
+Vanilla prefix search time: 0.0343649 seconds
+Dictionary prefix search time (no SIMD): 0.0325781 seconds
+Dictionary prefix search time (SIMD): 0.0321756 seconds
+
+Single item search indices in vanilla data: 39 
+Single item search indices in encoded data: 39 
+Prefix search unique matches and indices in vanilla data:
+wowtuamhrrgiwxuzofbqlenmkzfkqwxv at index 39
+wowobrkfjpqcrflnlbpvahalrenkgzfg at index 8607
+wowwpbdjihxgmydwgkpwtrbwljasghax at index 13144
+wowneybvjzvjkbyxdbryrbfrddkeggcs at index 19528
+wowgoorxgbcnnlsfyzxysfpzqpbnvkfi at index 33807
+wowmwcveyjordjqmjltvojsneusfzdja at index 44479
+wowyjccoiizianxfnyimfzncqxeekmzt at index 89278
+wowywkksmoftskaakqgorglqafnpkpgi at index 104655
+wowjxbmxbnejbqkbvngdtirunpndifbf at index 105694
+wowtavxtzanraxaloltekyqplrfblzcr at index 142951
+wowuqhtwphrhutxbximhfbruqluetpon at index 168041
+wowfkiqckzaxvabdvcrhvfsitqpvcaun at index 178416
+wowrwnwwsygziparkkpejqljerologto at index 185553
+wowfezgvbdxuuyrhrowefevrtqbrlxjw at index 187067
+wowydqtxyfolyfcokqvheruvegkhnqqq at index 188655
+wowlryllxbuqegfrkuanbduaohcbdrnj at index 198573
+wowpvehoslnfmcwknzhclnuuiqzslchb at index 199277
+wowqwabbhrgussdjcmonhtbpcnvhdpbf at index 232396
+wowmoczykytaiymdtlaaxlrddtnvkvqm at index 263819
+wowssxopxajlxjysdtcotdpjaefruevo at index 277832
+wowinoaowcqbuudeyhbefhzrsvtnvnlz at index 283195
+wowekqwkafcxginjufcjhtngsmipbway at index 331389
+wowkljvgbgvkmhdbrymbcazwauzmxiru at index 338237
+wowphtwkhxeqbkdazuudfztvjxrvfcdl at index 342110
+wowmprkrlnccfazswccfjhhhcfeorhsz at index 357389
+wowwhvgxhlqsbjnbqatpznaopadbnomt at index 367304
+wowmtfwflepwkdwjhhknriqgnkkzizhv at index 391877
+wowageiydattefyxuodimovhfimjozrs at index 399545
+woweubocuxczxiyycdqiswgwlnwpnsdy at index 404136
+wowgkhoavwzmqjtbuhjfthaahxymapja at index 405273
+woweveeoagmbyncjjswqhennuobbpvgu at index 410940
+wowzhuaqrzzhurldsmmxyiaawgpzmxyp at index 458221
+wowkvotjecpggfwrsoquuopnwgpojxfw at index 465389
+wowrlmcaskwxnufsuxjhlcjsgdjyadap at index 465419
+wowcoeqfwnqqgqmivtahmvimkqvohxco at index 497560
+wowthrywtnrtwmlxzmshdvtswplpvokm at index 538708
+wowtidrtaxaygyledzekbeargesieqml at index 544668
+wowfevbdgskeykmaduesofixldqfhmzm at index 566841
+wowsyxnpndomudmngridqlwpsvvlkkxf at index 654782
+wowlsflrnejgubdwsvtlpcpmicexviyw at index 682600
+wowasjcflvsnvqkvadmxsxkspxivtqvy at index 685504
+wowmsbrrlrdcabtxmpcuwltsneylryhy at index 689896
+wowojcyrcszepfcvdnwkqjknscfvfedx at index 699584
+wowynapyndyslkwxxxfonotzwjjestpr at index 728337
+wowecbwnwppmdncpuguoknimfcwpddln at index 729319
+wowjpgickcnaiuslvhwbfzrhwwlmogbg at index 753551
+wowllppcrngzykmltwujelhdcttbabbt at index 799785
+wowqgxeeuxgcpkvwnvpgnzrhjwgpadmx at index 818790
+wowqdsucxckpmmftafrlaqelzhqzeojf at index 824658
+wowdmcvrktxoqehwprlsyqysvnqchlli at index 833703
+wowfqgvdjzzjrpgxsmnxkmxfbthgeonz at index 904139
+wowdcbrozonlzjfcpomjktmtmakzhcoi at index 938465
+wowlwnxgcfudbfbbflccumodevtdukac at index 945580
+wowyfpjbejkbxdjwtcqeykzyeankglfe at index 958699
+wowmqdpcqcwwfukdizgoxmbzrfaytisn at index 966794
+wowarlxfdfyhbuspxvkbmdxffgqmgbkc at index 972767
+wowcnqbqnkoevgsdypckefntesdgkqmn at index 978129
+wowanxxbhtgfjqqkfspjswwcjcpffunm at index 988573
+wowdzeleuypfqjowiujcrjuivjbbtvjl at index 991094
+wowlndcwnhlfbtncylupcfcftuecbwai at index 993291
+wowfjvlraidrtunxcdrufekgfwghayjo at index 1014835
+
+Prefix search unique matches and indices in encoded data:
+Encoded Value: 222907 at index 39
+Encoded Value: 267292 at index 8607
+Encoded Value: 278905 at index 13144
+Encoded Value: 293248 at index 19528
+Encoded Value: 468951 at index 33807
+Encoded Value: 255229 at index 44479
+Encoded Value: 327007 at index 89278
+Encoded Value: 303518 at index 104655
+Encoded Value: 344072 at index 105694
+Encoded Value: 126153 at index 142951
+Encoded Value: 198997 at index 168041
+Encoded Value: 364084 at index 178416
+Encoded Value: 129107 at index 185553
+Encoded Value: 314376 at index 187067
+Encoded Value: 396738 at index 188655
+Encoded Value: 412583 at index 198573
+Encoded Value: 304465 at index 199277
+Encoded Value: 425233 at index 232396
+Encoded Value: 177651 at index 263819
+Encoded Value: 375822 at index 277832
+Encoded Value: 473443 at index 283195
+Encoded Value: 299139 at index 331389
+Encoded Value: 330140 at index 338237
+Encoded Value: 379728 at index 342110
+Encoded Value: 276250 at index 357389
+Encoded Value: 155911 at index 367304
+Encoded Value: 461086 at index 391877
+Encoded Value: 72685 at index 399545
+Encoded Value: 68056 at index 404136
+Encoded Value: 67288 at index 405273
+Encoded Value: 63603 at index 410940
+Encoded Value: 34728 at index 458221
+Encoded Value: 30602 at index 465389
+Encoded Value: 30582 at index 465419
+Encoded Value: 156676 at index 497560
+Encoded Value: 761714 at index 538708
+Encoded Value: 853339 at index 544668
+Encoded Value: 819380 at index 566841
+Encoded Value: 1041420 at index 654782
+Encoded Value: 874665 at index 682600
+Encoded Value: 637404 at index 685504
+Encoded Value: 834580 at index 689896
+Encoded Value: 816616 at index 699584
+Encoded Value: 918591 at index 728337
+Encoded Value: 919692 at index 729319
+Encoded Value: 657279 at index 753551
+Encoded Value: 932783 at index 799785
+Encoded Value: 1007543 at index 818790
+Encoded Value: 812625 at index 824658
+Encoded Value: 1019096 at index 833703
+Encoded Value: 609055 at index 904139
+Encoded Value: 586018 at index 938465
+Encoded Value: 583514 at index 945580
+Encoded Value: 857390 at index 958699
+Encoded Value: 568446 at index 966794
+Encoded Value: 564915 at index 972767
+Encoded Value: 861791 at index 978129
+Encoded Value: 847621 at index 988573
+Encoded Value: 921376 at index 991094
+Encoded Value: 553127 at index 993291
+Encoded Value: 541281 at index 1014835
+Saved dictionary and encoded data for 2 threads.
+
+
+Running experiment with 4 threads
+Vanilla single item search time: 0.0168108 seconds
+Dictionary single item search time (no SIMD): 0.00233418 seconds
+Dictionary single item search time (SIMD): 0.000573298 seconds
+Vanilla prefix search time: 0.0336547 seconds
+Dictionary prefix search time (no SIMD): 0.0324437 seconds
+Dictionary prefix search time (SIMD): 0.0349848 seconds
+
+Single item search indices in vanilla data: 39 
+Single item search indices in encoded data: 39 
+Prefix search unique matches and indices in vanilla data:
+wowtuamhrrgiwxuzofbqlenmkzfkqwxv at index 39
+wowobrkfjpqcrflnlbpvahalrenkgzfg at index 8607
+wowwpbdjihxgmydwgkpwtrbwljasghax at index 13144
+wowneybvjzvjkbyxdbryrbfrddkeggcs at index 19528
+wowgoorxgbcnnlsfyzxysfpzqpbnvkfi at index 33807
+wowmwcveyjordjqmjltvojsneusfzdja at index 44479
+wowyjccoiizianxfnyimfzncqxeekmzt at index 89278
+wowywkksmoftskaakqgorglqafnpkpgi at index 104655
+wowjxbmxbnejbqkbvngdtirunpndifbf at index 105694
+wowtavxtzanraxaloltekyqplrfblzcr at index 142951
+wowuqhtwphrhutxbximhfbruqluetpon at index 168041
+wowfkiqckzaxvabdvcrhvfsitqpvcaun at index 178416
+wowrwnwwsygziparkkpejqljerologto at index 185553
+wowfezgvbdxuuyrhrowefevrtqbrlxjw at index 187067
+wowydqtxyfolyfcokqvheruvegkhnqqq at index 188655
+wowlryllxbuqegfrkuanbduaohcbdrnj at index 198573
+wowpvehoslnfmcwknzhclnuuiqzslchb at index 199277
+wowqwabbhrgussdjcmonhtbpcnvhdpbf at index 232396
+wowmoczykytaiymdtlaaxlrddtnvkvqm at index 263819
+wowssxopxajlxjysdtcotdpjaefruevo at index 277832
+wowinoaowcqbuudeyhbefhzrsvtnvnlz at index 283195
+wowekqwkafcxginjufcjhtngsmipbway at index 331389
+wowkljvgbgvkmhdbrymbcazwauzmxiru at index 338237
+wowphtwkhxeqbkdazuudfztvjxrvfcdl at index 342110
+wowmprkrlnccfazswccfjhhhcfeorhsz at index 357389
+wowwhvgxhlqsbjnbqatpznaopadbnomt at index 367304
+wowmtfwflepwkdwjhhknriqgnkkzizhv at index 391877
+wowageiydattefyxuodimovhfimjozrs at index 399545
+woweubocuxczxiyycdqiswgwlnwpnsdy at index 404136
+wowgkhoavwzmqjtbuhjfthaahxymapja at index 405273
+woweveeoagmbyncjjswqhennuobbpvgu at index 410940
+wowzhuaqrzzhurldsmmxyiaawgpzmxyp at index 458221
+wowkvotjecpggfwrsoquuopnwgpojxfw at index 465389
+wowrlmcaskwxnufsuxjhlcjsgdjyadap at index 465419
+wowcoeqfwnqqgqmivtahmvimkqvohxco at index 497560
+wowthrywtnrtwmlxzmshdvtswplpvokm at index 538708
+wowtidrtaxaygyledzekbeargesieqml at index 544668
+wowfevbdgskeykmaduesofixldqfhmzm at index 566841
+wowsyxnpndomudmngridqlwpsvvlkkxf at index 654782
+wowlsflrnejgubdwsvtlpcpmicexviyw at index 682600
+wowasjcflvsnvqkvadmxsxkspxivtqvy at index 685504
+wowmsbrrlrdcabtxmpcuwltsneylryhy at index 689896
+wowojcyrcszepfcvdnwkqjknscfvfedx at index 699584
+wowynapyndyslkwxxxfonotzwjjestpr at index 728337
+wowecbwnwppmdncpuguoknimfcwpddln at index 729319
+wowjpgickcnaiuslvhwbfzrhwwlmogbg at index 753551
+wowllppcrngzykmltwujelhdcttbabbt at index 799785
+wowqgxeeuxgcpkvwnvpgnzrhjwgpadmx at index 818790
+wowqdsucxckpmmftafrlaqelzhqzeojf at index 824658
+wowdmcvrktxoqehwprlsyqysvnqchlli at index 833703
+wowfqgvdjzzjrpgxsmnxkmxfbthgeonz at index 904139
+wowdcbrozonlzjfcpomjktmtmakzhcoi at index 938465
+wowlwnxgcfudbfbbflccumodevtdukac at index 945580
+wowyfpjbejkbxdjwtcqeykzyeankglfe at index 958699
+wowmqdpcqcwwfukdizgoxmbzrfaytisn at index 966794
+wowarlxfdfyhbuspxvkbmdxffgqmgbkc at index 972767
+wowcnqbqnkoevgsdypckefntesdgkqmn at index 978129
+wowanxxbhtgfjqqkfspjswwcjcpffunm at index 988573
+wowdzeleuypfqjowiujcrjuivjbbtvjl at index 991094
+wowlndcwnhlfbtncylupcfcftuecbwai at index 993291
+wowfjvlraidrtunxcdrufekgfwghayjo at index 1014835
+
+Prefix search unique matches and indices in encoded data:
+Encoded Value: 149408 at index 39
+Encoded Value: 114769 at index 8607
+Encoded Value: 106303 at index 13144
+Encoded Value: 96121 at index 19528
+Encoded Value: 161800 at index 33807
+Encoded Value: 170815 at index 44479
+Encoded Value: 73255 at index 89278
+Encoded Value: 88984 at index 104655
+Encoded Value: 62387 at index 105694
+Encoded Value: 239949 at index 142951
+Encoded Value: 169797 at index 168041
+Encoded Value: 50085 at index 178416
+Encoded Value: 236853 at index 185553
+Encoded Value: 219993 at index 187067
+Encoded Value: 42682 at index 188655
+Encoded Value: 35927 at index 198573
+Encoded Value: 88344 at index 199277
+Encoded Value: 15302 at index 232396
+Encoded Value: 390954 at index 263819
+Encoded Value: 436375 at index 277832
+Encoded Value: 345975 at index 283195
+Encoded Value: 452342 at index 331389
+Encoded Value: 322649 at index 338237
+Encoded Value: 384568 at index 342110
+Encoded Value: 453612 at index 357389
+Encoded Value: 392922 at index 367304
+Encoded Value: 490116 at index 391877
+Encoded Value: 496956 at index 399545
+Encoded Value: 501095 at index 404136
+Encoded Value: 452830 at index 405273
+Encoded Value: 377824 at index 410940
+Encoded Value: 299936 at index 458221
+Encoded Value: 295211 at index 465389
+Encoded Value: 512203 at index 465419
+Encoded Value: 515790 at index 497560
+Encoded Value: 661696 at index 538708
+Encoded Value: 596089 at index 544668
+Encoded Value: 618794 at index 566841
+Encoded Value: 713802 at index 654782
+Encoded Value: 759004 at index 682600
+Encoded Value: 778375 at index 685504
+Encoded Value: 781464 at index 689896
+Encoded Value: 620713 at index 699584
+Encoded Value: 556618 at index 728337
+Encoded Value: 555973 at index 729319
+Encoded Value: 756766 at index 753551
+Encoded Value: 922326 at index 799785
+Encoded Value: 893411 at index 818790
+Encoded Value: 865807 at index 824658
+Encoded Value: 875023 at index 833703
+Encoded Value: 974109 at index 904139
+Encoded Value: 911059 at index 938465
+Encoded Value: 1039179 at index 945580
+Encoded Value: 1037790 at index 958699
+Encoded Value: 980832 at index 966794
+Encoded Value: 952165 at index 972767
+Encoded Value: 827330 at index 978129
+Encoded Value: 820359 at index 988573
+Encoded Value: 818717 at index 991094
+Encoded Value: 1010642 at index 993291
+Encoded Value: 1019710 at index 1014835
+Saved dictionary and encoded data for 4 threads.
+
+
+Running experiment with 8 threads
+Vanilla single item search time: 0.0165489 seconds
+Dictionary single item search time (no SIMD): 0.00225471 seconds
+Dictionary single item search time (SIMD): 0.000655496 seconds
+Vanilla prefix search time: 0.0325406 seconds
+Dictionary prefix search time (no SIMD): 0.0345408 seconds
+Dictionary prefix search time (SIMD): 0.0340513 seconds
+
+Single item search indices in vanilla data: 39 
+Single item search indices in encoded data: 39 
+Prefix search unique matches and indices in vanilla data:
+wowtuamhrrgiwxuzofbqlenmkzfkqwxv at index 39
+wowobrkfjpqcrflnlbpvahalrenkgzfg at index 8607
+wowwpbdjihxgmydwgkpwtrbwljasghax at index 13144
+wowneybvjzvjkbyxdbryrbfrddkeggcs at index 19528
+wowgoorxgbcnnlsfyzxysfpzqpbnvkfi at index 33807
+wowmwcveyjordjqmjltvojsneusfzdja at index 44479
+wowyjccoiizianxfnyimfzncqxeekmzt at index 89278
+wowywkksmoftskaakqgorglqafnpkpgi at index 104655
+wowjxbmxbnejbqkbvngdtirunpndifbf at index 105694
+wowtavxtzanraxaloltekyqplrfblzcr at index 142951
+wowuqhtwphrhutxbximhfbruqluetpon at index 168041
+wowfkiqckzaxvabdvcrhvfsitqpvcaun at index 178416
+wowrwnwwsygziparkkpejqljerologto at index 185553
+wowfezgvbdxuuyrhrowefevrtqbrlxjw at index 187067
+wowydqtxyfolyfcokqvheruvegkhnqqq at index 188655
+wowlryllxbuqegfrkuanbduaohcbdrnj at index 198573
+wowpvehoslnfmcwknzhclnuuiqzslchb at index 199277
+wowqwabbhrgussdjcmonhtbpcnvhdpbf at index 232396
+wowmoczykytaiymdtlaaxlrddtnvkvqm at index 263819
+wowssxopxajlxjysdtcotdpjaefruevo at index 277832
+wowinoaowcqbuudeyhbefhzrsvtnvnlz at index 283195
+wowekqwkafcxginjufcjhtngsmipbway at index 331389
+wowkljvgbgvkmhdbrymbcazwauzmxiru at index 338237
+wowphtwkhxeqbkdazuudfztvjxrvfcdl at index 342110
+wowmprkrlnccfazswccfjhhhcfeorhsz at index 357389
+wowwhvgxhlqsbjnbqatpznaopadbnomt at index 367304
+wowmtfwflepwkdwjhhknriqgnkkzizhv at index 391877
+wowageiydattefyxuodimovhfimjozrs at index 399545
+woweubocuxczxiyycdqiswgwlnwpnsdy at index 404136
+wowgkhoavwzmqjtbuhjfthaahxymapja at index 405273
+woweveeoagmbyncjjswqhennuobbpvgu at index 410940
+wowzhuaqrzzhurldsmmxyiaawgpzmxyp at index 458221
+wowkvotjecpggfwrsoquuopnwgpojxfw at index 465389
+wowrlmcaskwxnufsuxjhlcjsgdjyadap at index 465419
+wowcoeqfwnqqgqmivtahmvimkqvohxco at index 497560
+wowthrywtnrtwmlxzmshdvtswplpvokm at index 538708
+wowtidrtaxaygyledzekbeargesieqml at index 544668
+wowfevbdgskeykmaduesofixldqfhmzm at index 566841
+wowsyxnpndomudmngridqlwpsvvlkkxf at index 654782
+wowlsflrnejgubdwsvtlpcpmicexviyw at index 682600
+wowasjcflvsnvqkvadmxsxkspxivtqvy at index 685504
+wowmsbrrlrdcabtxmpcuwltsneylryhy at index 689896
+wowojcyrcszepfcvdnwkqjknscfvfedx at index 699584
+wowynapyndyslkwxxxfonotzwjjestpr at index 728337
+wowecbwnwppmdncpuguoknimfcwpddln at index 729319
+wowjpgickcnaiuslvhwbfzrhwwlmogbg at index 753551
+wowllppcrngzykmltwujelhdcttbabbt at index 799785
+wowqgxeeuxgcpkvwnvpgnzrhjwgpadmx at index 818790
+wowqdsucxckpmmftafrlaqelzhqzeojf at index 824658
+wowdmcvrktxoqehwprlsyqysvnqchlli at index 833703
+wowfqgvdjzzjrpgxsmnxkmxfbthgeonz at index 904139
+wowdcbrozonlzjfcpomjktmtmakzhcoi at index 938465
+wowlwnxgcfudbfbbflccumodevtdukac at index 945580
+wowyfpjbejkbxdjwtcqeykzyeankglfe at index 958699
+wowmqdpcqcwwfukdizgoxmbzrfaytisn at index 966794
+wowarlxfdfyhbuspxvkbmdxffgqmgbkc at index 972767
+wowcnqbqnkoevgsdypckefntesdgkqmn at index 978129
+wowanxxbhtgfjqqkfspjswwcjcpffunm at index 988573
+wowdzeleuypfqjowiujcrjuivjbbtvjl at index 991094
+wowlndcwnhlfbtncylupcfcftuecbwai at index 993291
+wowfjvlraidrtunxcdrufekgfwghayjo at index 1014835
+
+Prefix search unique matches and indices in encoded data:
+Encoded Value: 47153 at index 39
+Encoded Value: 73069 at index 8607
+Encoded Value: 80153 at index 13144
+Encoded Value: 88936 at index 19528
+Encoded Value: 38838 at index 33807
+Encoded Value: 91244 at index 44479
+Encoded Value: 110481 at index 89278
+Encoded Value: 95458 at index 104655
+Encoded Value: 122010 at index 105694
+Encoded Value: 209063 at index 142951
+Encoded Value: 257953 at index 168041
+Encoded Value: 227706 at index 178416
+Encoded Value: 245520 at index 185553
+Encoded Value: 237457 at index 187067
+Encoded Value: 206054 at index 188655
+Encoded Value: 209848 at index 198573
+Encoded Value: 249161 at index 199277
+Encoded Value: 147560 at index 232396
+Encoded Value: 324220 at index 263819
+Encoded Value: 293025 at index 277832
+Encoded Value: 362580 at index 283195
+Encoded Value: 381076 at index 331389
+Encoded Value: 386675 at index 338237
+Encoded Value: 329170 at index 342110
+Encoded Value: 282660 at index 357389
+Encoded Value: 322773 at index 367304
+Encoded Value: 262766 at index 391877
+Encoded Value: 482977 at index 399545
+Encoded Value: 444911 at index 404136
+Encoded Value: 454691 at index 405273
+Encoded Value: 468299 at index 410940
+Encoded Value: 455865 at index 458221
+Encoded Value: 514762 at index 465389
+Encoded Value: 497022 at index 465419
+Encoded Value: 496348 at index 497560
+Encoded Value: 580067 at index 538708
+Encoded Value: 636463 at index 544668
+Encoded Value: 614669 at index 566841
+Encoded Value: 628188 at index 654782
+Encoded Value: 737356 at index 682600
+Encoded Value: 727803 at index 685504
+Encoded Value: 688344 at index 689896
+Encoded Value: 778095 at index 699584
+Encoded Value: 692950 at index 728337
+Encoded Value: 778329 at index 729319
+Encoded Value: 738277 at index 753551
+Encoded Value: 843572 at index 799785
+Encoded Value: 866362 at index 818790
+Encoded Value: 891433 at index 824658
+Encoded Value: 882714 at index 833703
+Encoded Value: 809467 at index 904139
+Encoded Value: 965789 at index 938465
+Encoded Value: 963768 at index 945580
+Encoded Value: 958904 at index 958699
+Encoded Value: 1016166 at index 966794
+Encoded Value: 994195 at index 972767
+Encoded Value: 1001084 at index 978129
+Encoded Value: 1001918 at index 988573
+Encoded Value: 1028568 at index 991094
+Encoded Value: 1041860 at index 993291
+Encoded Value: 936773 at index 1014835
+Saved dictionary and encoded data for 8 threads.
+
+
