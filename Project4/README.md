@@ -21,70 +21,79 @@ This project implements a dictionary codec to compress data and accelerate searc
 ## Files and Structure
 
 - `main.cpp`: Main program implementing the dictionary codec, including encoding, querying, multi-threading, and SIMD functionality.
-- `generate_test.py`: Generates a raw test data file with customizable line count and line length for performance evaluation.
+- `generate_test.py`: Generates a raw test data file with customizable line count and line length for performance evaluation. For example, running `python3 generate_test.py 1000000 128` means generating 1,000,000 rows of data, with each row containing 128 random lowercase letters. The default configuration is 1,024 * 1,024 (1M) rows, with each row containing 32 random lowercase letters.
 - `run.sh`: Script for compiling and executing the program with different configurations (e.g., varying thread counts). Stores performance results in `results.txt`.
 
 ### Generated Files
-- `dictionary.txt`: Contains the unique data items and their assigned dictionary IDs.
-- `encoded_data.txt`: Contains the encoded data column, with each entry represented by its dictionary ID.
-- `results.txt`: Stores the results of performance tests, including encoding and query speeds for various configurations.
+- `test.txt`: Contains the unique test data items.
+- `dictionary.txt`: Contains the unique data items and their assigned dictionary IDs. Such as:
+```
+pjxzwikmydnpxexjxrgwvzziwmboojhk 1048575
+wrveynzkcwvxwbuwnayswxowaiynfgns 1048574
+znuanfdgqsnctljqunkvcjpjtlspfxnh 1048573
+lhlomlwfzcnnbrpkoffwczkwjhedgknh 1048572
+btjgcwcyqehyccvzxnzxnsuqvvgcbafv 1048571
+cywrepngsmtfjovyyfelgmssxzdemrde 1048570
+fksippnjyyiwrmeilkqqasfhfxfqonpw 1048569
+```
+- `encoded_data.txt`: Contains the encoded data column, with each entry represented by its dictionary ID. Such as:
+```
+628999
+531390
+624835
+510168
+676302
+316368
+673420
+521693
+875146
+612544
+505441
+226099
+```
+- `results.txt`: Stores the results of search and performance tests, including encoding and query speeds for various configurations.
 
 ## Usage
 
-### Compiling and Running
+### Generating Test Data
 
-1. Compile the program:
-    ```bash
-    ./run.sh
-    ```
+1. Generate the test data file using the following command:
 
-2. Execute the program with specific parameters:
-    ```bash
-    ./main <search_value> <prefix> <data_path>
-    ```
-   - `<search_value>`: The value to be searched in single item search.
-   - `<prefix>`: The prefix to be searched in prefix scan.
-   - `<data_path>`: Path to the raw column data file.
-
-### Example
 ```bash
-./main apple a ./test.txt
+python3 generate_test.py
 ```
 
-### Multi-threading and SIMD
-- Set the number of threads by exporting the `NUM_THREADS` environment variable (e.g., `export NUM_THREADS=4`).
-- The program uses SIMD instructions (if supported by the system) for accelerated search/scan operations.
+This command will create the test data file named `test.txt`.
+
+### Running the Program
+
+2. Execute the program:
+
+```bash
+./run.sh
+```
+
+The `run.sh` script will output all results, including both the full data item search and the prefix search.
+
+### Example Values
+
+In `run.sh`, you can update the values for `search_value` and `prefix` as needed to either search for a complete data item or perform a prefix search.
+
 
 ## Performance Evaluation
 
-### Encoding Performance
+**Test Configuration**:
+- The test memory size is 32 * 1024 * 1024 = 32MB.
+- Single Item Search content: "wowtuamhrrgiwxuzofbqlenmkzfkqwxv"
+- Prefix Search content: "wow"
 
-To evaluate encoding performance:
-1. Run the program with different thread counts (e.g., 1, 2, 4, 8) to measure encoding time.
-2. Record encoding speed with each thread count for analysis and comparison.
+| Thread Count | Vanilla Single Item Search Time (s) | Dictionary Single Item Search Time (No SIMD) (s) | Dictionary Single Item Search Time (SIMD) (s) | Vanilla Prefix Search Time (s) | Dictionary Prefix Search Time (No SIMD) (s) | Dictionary Prefix Search Time (SIMD) (s) |
+|--------------|-------------------------------------|------------------------------------------------|----------------------------------------------|-------------------------------|---------------------------------------------|-------------------------------------------|
+| 1            | 0.0158985                           | 0.00223477                                     | 0.000583437                                  | 0.0323419                    | 0.0322951                                  | 0.033759                                  |
+| 2            | 0.0168299                           | 0.00225779                                     | 0.000597504                                  | 0.0343649                    | 0.0325781                                  | 0.0321756                                 |
+| 4            | 0.0168108                           | 0.00233418                                     | 0.000573298                                  | 0.0336547                    | 0.0324437                                  | 0.0349848                                 |
+| 8            | 0.0165489                           | 0.00225471                                     | 0.000655496                                  | 0.0325406                    | 0.0345408                                  | 0.0340513                                 |
 
-### Query Performance
-
-To evaluate query performance:
-1. Measure and record the search time and prefix scan time under the following configurations:
-   - Vanilla baseline (without dictionary encoding)
-   - Dictionary encoding without SIMD
-   - Dictionary encoding with SIMD (if supported by the system)
-
-### Experimental Results
-
-**Encoding Performance**:
-- Encoding speed with different thread counts: [Fill in with experimental data]
-
-**Single Item Search Speed**:
-- Vanilla baseline: [Fill in with experimental data]
-- Dictionary (without SIMD): [Fill in with experimental data]
-- Dictionary (with SIMD): [Fill in with experimental data]
-
-**Prefix Scan Speed**:
-- Vanilla baseline: [Fill in with experimental data]
-- Dictionary (without SIMD): [Fill in with experimental data]
-- Dictionary (with SIMD): [Fill in with experimental data]
 
 ## Analysis and Conclusion
 
