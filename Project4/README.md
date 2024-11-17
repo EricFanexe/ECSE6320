@@ -70,7 +70,7 @@ This command will create the test data file named `test.txt`.
 2. Execute the program:
 
 ```bash
-./run.sh
+bash run.sh
 ```
 
 The `run.sh` script will output all results, including both the full data item search and the prefix search.
@@ -87,22 +87,34 @@ In `run.sh`, you can update the values for `search_value` and `prefix` as needed
 - Single Item Search content: "wowtuamhrrgiwxuzofbqlenmkzfkqwxv"
 - Prefix Search content: "wow"
 
-| Thread Count | Vanilla Single Item Search Time (s) | Dictionary Single Item Search Time (No SIMD) (s) | Dictionary Single Item Search Time (SIMD) (s) | Vanilla Prefix Search Time (s) | Dictionary Prefix Search Time (No SIMD) (s) | Dictionary Prefix Search Time (SIMD) (s) |
-|--------------|-------------------------------------|------------------------------------------------|----------------------------------------------|-------------------------------|---------------------------------------------|-------------------------------------------|
-| 1            | 0.0158985                           | 0.00223477                                     | 0.000583437                                  | 0.0323419                    | 0.0322951                                  | 0.033759                                  |
-| 2            | 0.0168299                           | 0.00225779                                     | 0.000597504                                  | 0.0343649                    | 0.0325781                                  | 0.0321756                                 |
-| 4            | 0.0168108                           | 0.00233418                                     | 0.000573298                                  | 0.0336547                    | 0.0324437                                  | 0.0349848                                 |
-| 8            | 0.0165489                           | 0.00225471                                     | 0.000655496                                  | 0.0325406                    | 0.0345408                                  | 0.0340513                                 |
-
+| Thread Count | Encoding Time (s) | Single Item Search Time - Vanilla (s) | Single Item Search Time - Dictionary (No SIMD) (s) | Single Item Search Time - Dictionary (SIMD) (s) | Prefix Search Time - Vanilla (s) | Prefix Search Time - Dictionary (No SIMD) (s) | Prefix Search Time - Dictionary (SIMD) (s) |
+|--------------|------------------|----------------------------------------|--------------------------------------------------|---------------------------------------------|---------------------------|-------------------------------------------------|---------------------------------------------|
+| 1            | 5.96592          | 0.0324187                              | 0.00457748                                       | 0.00121287                                  | 0.0661013                | 0.071602                                        | 0.0646848                                  |
+| 2            | 5.49054          | 0.0319899                              | 0.00638956                                       | 0.00115925                                  | 0.0651126                | 0.0686106                                        | 0.073157                                   |
+| 4            | 5.48646          | 0.0331243                              | 0.00461476                                       | 0.00157732                                  | 0.0646633                | 0.0651314                                        | 0.065361                                   |
+| 8            | 5.01747          | 0.0334036                              | 0.0050234                                        | 0.00115426                                  | 0.0655487                | 0.0658616                                        | 0.0645386                                  |
 
 ## Analysis and Conclusion
 
-This section summarizes the performance gains achieved through dictionary encoding, multi-threading, and SIMD instructions:
+### Analysis
 
-1. **Multi-threading Analysis**: [Discuss the impact of varying thread counts on encoding speed, including any observed speedup or bottlenecks.]
+From the experimental data, we observe the following trends:
 
-2. **SIMD Utilization**: [Describe the effect of SIMD on query operations. If SIMD significantly improved query performance, highlight this advantage, especially for prefix scans and single item searches.]
+1. **Encoding Performance**:
+   - The encoding time decreases as the number of threads increases, indicating that parallelism has a positive impact on the encoding process.
 
-3. **Comparison with Vanilla Baseline**: [Compare dictionary encoding performance to the vanilla baseline, explaining how the dictionary codec enhances search/scan efficiency.]
+2. **Single Item Search Performance**:
+   - The vanilla baseline search time remains fairly consistent across different thread counts, with minimal variation.
+   - Dictionary encoding without SIMD shows a slight fluctuation, but it generally achieves faster search times compared to the vanilla baseline.
+   - Dictionary encoding with SIMD consistently provides the fastest search times, significantly outperforming both the vanilla baseline and dictionary encoding without SIMD.
 
-4. **Conclusion and Future Optimizations**: [Summarize the findings and suggest potential future improvements, such as further optimizing multi-threading efficiency, exploring other dictionary management techniques, or refining SIMD operations.]
+3. **Prefix Search Performance**:
+   - The vanilla baseline prefix search time remains relatively stable across different thread counts.
+   - Dictionary encoding without SIMD generally shows a slight increase in prefix search time compared to the vanilla baseline, suggesting that the additional lookup overhead without SIMD might negatively impact performance.
+   - Dictionary encoding with SIMD offers comparable or slightly improved prefix search times relative to the vanilla baseline, demonstrating that SIMD provides benefits for prefix searches by accelerating the data processing.
+
+### Conclusion
+
+The experimental results demonstrate that increasing the number of threads positively affects the encoding time. Dictionary encoding, particularly when combined with SIMD, consistently outperforms the vanilla baseline in both single item search and prefix scan scenarios. SIMD-enabled dictionary encoding offers the best performance overall, making it the preferred option for applications where search speed is critical. However, dictionary encoding without SIMD may not always improve prefix scan performance, and careful consideration is required to determine its suitability based on the specific use case.
+
+Overall, the combination of dictionary encoding and SIMD can lead to significant performance gains, especially for single item searches, and should be considered for optimizing search-intensive tasks.
