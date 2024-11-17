@@ -214,6 +214,7 @@ int main(int argc, char* argv[]) {
     end = chrono::high_resolution_clock::now();
     chrono::duration<double> encoding_time = end - start;
 
+
     // Convert search value to encoded format
     string search_value = argv[1];
     int encoded_search_value = dict.count(search_value) ? dict[search_value] : -1;
@@ -252,6 +253,7 @@ int main(int argc, char* argv[]) {
     #endif
 
     // Print results
+    cout << "Encoding time: " << encoding_time.count() << " seconds" << endl;
     cout << "Vanilla single item search time: " << vanilla_search_time.count() << " seconds" << endl;
     cout << "Dictionary single item search time (no SIMD): " << dict_search_time.count() << " seconds" << endl;
     #ifdef __AVX2__

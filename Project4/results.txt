@@ -1,10 +1,11 @@
 Running experiment with 1 threads
-Vanilla single item search time: 0.0158985 seconds
-Dictionary single item search time (no SIMD): 0.00223477 seconds
-Dictionary single item search time (SIMD): 0.000583437 seconds
-Vanilla prefix search time: 0.0323419 seconds
-Dictionary prefix search time (no SIMD): 0.0322951 seconds
-Dictionary prefix search time (SIMD): 0.033759 seconds
+Encoding time: 5.96592 seconds
+Vanilla single item search time: 0.0324187 seconds
+Dictionary single item search time (no SIMD): 0.00457748 seconds
+Dictionary single item search time (SIMD): 0.00121287 seconds
+Vanilla prefix search time: 0.0661013 seconds
+Dictionary prefix search time (no SIMD): 0.071602 seconds
+Dictionary prefix search time (SIMD): 0.0646848 seconds
 
 Single item search indices in vanilla data: 39 
 Single item search indices in encoded data: 39 
@@ -137,12 +138,13 @@ Saved dictionary and encoded data for 1 threads.
 
 
 Running experiment with 2 threads
-Vanilla single item search time: 0.0168299 seconds
-Dictionary single item search time (no SIMD): 0.00225779 seconds
-Dictionary single item search time (SIMD): 0.000597504 seconds
-Vanilla prefix search time: 0.0343649 seconds
-Dictionary prefix search time (no SIMD): 0.0325781 seconds
-Dictionary prefix search time (SIMD): 0.0321756 seconds
+Encoding time: 5.49054 seconds
+Vanilla single item search time: 0.0319899 seconds
+Dictionary single item search time (no SIMD): 0.00638956 seconds
+Dictionary single item search time (SIMD): 0.00115925 seconds
+Vanilla prefix search time: 0.0651126 seconds
+Dictionary prefix search time (no SIMD): 0.0686106 seconds
+Dictionary prefix search time (SIMD): 0.073157 seconds
 
 Single item search indices in vanilla data: 39 
 Single item search indices in encoded data: 39 
@@ -275,12 +277,13 @@ Saved dictionary and encoded data for 2 threads.
 
 
 Running experiment with 4 threads
-Vanilla single item search time: 0.0168108 seconds
-Dictionary single item search time (no SIMD): 0.00233418 seconds
-Dictionary single item search time (SIMD): 0.000573298 seconds
-Vanilla prefix search time: 0.0336547 seconds
-Dictionary prefix search time (no SIMD): 0.0324437 seconds
-Dictionary prefix search time (SIMD): 0.0349848 seconds
+Encoding time: 5.48646 seconds
+Vanilla single item search time: 0.0331243 seconds
+Dictionary single item search time (no SIMD): 0.00461476 seconds
+Dictionary single item search time (SIMD): 0.00157732 seconds
+Vanilla prefix search time: 0.0646633 seconds
+Dictionary prefix search time (no SIMD): 0.0651314 seconds
+Dictionary prefix search time (SIMD): 0.065361 seconds
 
 Single item search indices in vanilla data: 39 
 Single item search indices in encoded data: 39 
@@ -413,12 +416,13 @@ Saved dictionary and encoded data for 4 threads.
 
 
 Running experiment with 8 threads
-Vanilla single item search time: 0.0165489 seconds
-Dictionary single item search time (no SIMD): 0.00225471 seconds
-Dictionary single item search time (SIMD): 0.000655496 seconds
-Vanilla prefix search time: 0.0325406 seconds
-Dictionary prefix search time (no SIMD): 0.0345408 seconds
-Dictionary prefix search time (SIMD): 0.0340513 seconds
+Encoding time: 5.01747 seconds
+Vanilla single item search time: 0.0334036 seconds
+Dictionary single item search time (no SIMD): 0.0050234 seconds
+Dictionary single item search time (SIMD): 0.00115426 seconds
+Vanilla prefix search time: 0.0655487 seconds
+Dictionary prefix search time (no SIMD): 0.0658616 seconds
+Dictionary prefix search time (SIMD): 0.0645386 seconds
 
 Single item search indices in vanilla data: 39 
 Single item search indices in encoded data: 39 
