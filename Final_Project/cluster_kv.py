@@ -236,7 +236,6 @@ def forward(
     key_states = repeat_kv(key_states, self.num_key_value_groups)
     value_states = repeat_kv(value_states, self.num_key_value_groups)
 
-    # 调用计算每个 page 内 keys 相似度的函数
     rearranged_key_states, rearranged_value_states = calculate_cosine_similarity_in_page(key_states, value_states, self.chunk_size, self.layer_id)
 
     # 确保 key_states 和 query_states 的数据类型一致

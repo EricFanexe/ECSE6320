@@ -19,12 +19,8 @@ parser.add_argument("--tokens-step", type=int)
 parser.add_argument("--length-step", type=int, default=128)
 parser.add_argument("--iterations", type=int, default=20)
 parser.add_argument("--output_dir", type=str)
-
-# 新增参数：指定从哪个 token 开始，以及上下文的长度
 parser.add_argument("--start_idx", type=int, default=1, help="Starting index of the token")
-
 parser.add_argument("--num_eval_tokens", type=int, default=None)
-
 parser.add_argument("--quest", action="store_true", help="Enable quest attention")
 parser.add_argument("--token_budget", type=int, default=1024)
 parser.add_argument("--chunk_size", type=int, default=16)
@@ -74,7 +70,7 @@ if args.quest:
     enable_quest_attention_eval(model, args)
 
 os.makedirs(args.output_dir, exist_ok=True)
-f = open(f"{args.output_dir}/log6.txt", "w")
+f = open(f"{args.output_dir}/log.txt", "w")
 
 num_eval_tokens = 0
 for text in data["text"]:
@@ -103,7 +99,7 @@ for text in data["text"]:
         )
         past_key_values = outputs.past_key_values  # 保存上下文的past_key_values
 
-    # 从 start_idx 开始逐步递增输入序列的长度，并添加进度条
+    # 从 start_idx 开始逐步递增输入序列的长度
     pbar = tqdm(range(start_idx, seq_len - 1), desc="Processing tokens")
     for idx in pbar:
         input_ids = encodings.input_ids[:, idx : idx + 1].to(device)
@@ -141,5 +137,5 @@ f.close()
 
 ppl = torch.exp(torch.stack(nlls).mean())
 print(ppl.item())
-with open(f"{args.output_dir}/ppl6.txt", "w") as f:
+with open(f"{args.output_dir}/ppl.txt", "w") as f:
     f.write(f"{ppl.item()}\n")
